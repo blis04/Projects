@@ -16,7 +16,7 @@ def wordVariation(word):
     azList = change_word.swap_letter_az(word)
     splitList = change_word.split(word)
 
-    # This will check each variation of function 1 in lab 12
+    # This will check each variation of function 1
     for variation in shorterList:
         if commonHash.search(variation) == True or commonHash.search(variation.lower()) == True:
             if variation not in possibilityList:
@@ -25,7 +25,7 @@ def wordVariation(word):
             if variation not in possibilityList:
                 possibilityList.append((variation))
 
-    # This will check each variation of function 2 in lab 12
+    # This will check each variation of function 2 
     for variation in extraList:
         if commonHash.search(variation) == True or commonHash.search(variation.lower()) == True:
             if variation not in possibilityList:
@@ -33,7 +33,7 @@ def wordVariation(word):
         elif allwordHash.search(variation) == True or allwordHash.search(variation.lower()) == True:
             if variation not in possibilityList:
                 possibilityList.append((variation))
-    # This will check each variation of function 3 in lab 12
+    # This will check each variation of function 3 
     for variation in swapLetterList:
         if commonHash.search(variation) == True or commonHash.search(variation.lower()) == True:
             if variation not in possibilityList:
@@ -41,7 +41,7 @@ def wordVariation(word):
         elif allwordHash.search(variation) == True or allwordHash.search(variation.lower()) == True:
             if variation not in possibilityList:
                 possibilityList.append((variation))
-    # This will check each variation of function 4 in lab 12
+    # This will check each variation of function 4 
     for variation in azList:
         if commonHash.search(variation) == True or commonHash.search(variation.lower()) == True:
             if variation not in possibilityList:
@@ -49,7 +49,7 @@ def wordVariation(word):
         elif allwordHash.search(variation) == True or allwordHash.search(variation.lower()) == True:
             if variation not in possibilityList:
                 possibilityList.append((variation))
-    # This will check each variation of function 5 in lab 12
+    # This will check each variation of function 5 
     for variation in splitList:
         if commonHash.search(variation) == True or commonHash.search(variation.lower()) == True:
             if variation not in possibilityList:
@@ -83,7 +83,7 @@ with open('gettysburg.txt', 'r') as file:
         list_of_words = re.split('\s|\.|,|\-|\?|!|;|\$|\*|\(|\)', line)
         # do all the stuff about checking spelling etc on each word in list_of_words
         # we now have a list of words from the document
-        # we're gonna run it through my algorithms in lab 12 to find possible corrections
+        # we're gonna run it through my wordVariations to find possible corrections
         for word in list_of_words:
             if word != '':
                 if allwordHash.search(word) == False and allwordHash.search(word.lower()) == False:
